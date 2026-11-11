@@ -127,7 +127,7 @@ The backend is configured with Hibernate schema update (`spring.jpa.hibernate.dd
 ## Author
 
 **Ashis Saha**  
-B.Tech — Computer Science and Engineering
+
 
 ---
 
