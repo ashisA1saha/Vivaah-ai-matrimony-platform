@@ -1,0 +1,17 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: apni-shadi-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_NAME:-apni_shadi}
+      MYSQL_USER: ${DB_USERNAME:-apni_user}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-apni_password}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-local-root-password-change-me}
+    ports:
+      - "3306:3306"
+    volumes:
+      - apni-shadi-mysql:/var/lib/mysql
+
+volumes:
+  apni-shadi-mysql:
